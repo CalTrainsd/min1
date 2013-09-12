@@ -9,15 +9,15 @@
 
 <script>
 function onDeviceReady() {
-    consolelog("lfs: "+typeof(LocalFileSystem) ) ;
-    consolelog("rfs: "+typeof(window.requestFileSystem) ) ;
-    consolelog("hello" ) ;
-    consolelog("hello" ) ;
+//    consolelog("lfs: "+typeof(LocalFileSystem) ) ;
+//    consolelog("rfs: "+typeof(requestFileSystem) ) ;
+    consolelog("hello1" ) ;
+    consolelog("hello2" ) ;
 
-    window.requestFileSystem(1, 0, onFileSystemSuccess, fail);
-    consolelog("hello" ) ;
-    consolelog("hello" ) ;
-    consolelog("hello" ) ;
+ //   window.requestFileSystem(1, 0, onFileSystemSuccess, fail);
+    consolelog("hello3" ) ;
+    consolelog("hello4" ) ;
+    consolelog("hello5" ) ;
 
 }
 
@@ -33,23 +33,25 @@ function fail(evt) {
 
 ////log mess
 function consolelog( msg) {
+
 	var mess = document.getElementById( 'mess')
-	mess.innerHTML += "<br>" + msg ;
+	mess.innerHTML += "<br>>" + msg ;
 }
 
 </script>
  
 </head>
 <body>
- 
-<p>Hello World3</p>
- 
+ 123asdfasf
+<p>Hello World</p>
+ <div id="mess"></div>
  
 <script type="text/javascript">
-document.addEventListener('deviceready', this.onDeviceReady, false);
+document.addEventListener('deviceready', onDeviceReady, false);
 
-consolelog("hello");
-consolelog("lfs:"+LocalFileSystem));
+//onDeviceReady() ;
+//consolelog("hello");
+//consolelog("lfs:"+typeof(LocalFileSystem));
 </script>
 </body>
 </html>
